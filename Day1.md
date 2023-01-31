@@ -213,3 +213,125 @@ import java.lang.Math;
 
 ## 3. Class & Object
 ***
+### * Encapsulation(Tính đóng gói)
+***Tính đóng gói trong java*** là kỹ thuật ẩn giấu thông tin không liên quan và hiện thị ra thông liên quan. 
+***Ví dụ***
+```php
+public class EncapTest {
+   private String name;
+   private String idNum;
+   private int age;
+
+   public int getAge() {
+      return age;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public String getIdNum() {
+      return idNum;
+   }
+
+   public void setAge( int newAge) {
+      age = newAge;
+   }
+
+   public void setName(String newName) {
+      name = newName;
+   }
+
+   public void setIdNum( String newId) {
+      idNum = newId;
+   }
+}
+```
+### * Inheritance (Tính kế thừa)
+* ***Kế thừa trong java*** là sự liên quan giữa hai class với nhau, trong đó có class cha (superclass) và class con (subclass). Khi kế thừa class con được hưởng tất cả các phương thức và thuộc tính của class cha. Tuy nhiên, nó chỉ được truy cập các thành viên public và protected của class cha. Nó không được phép truy cập đến thành viên private của class cha.
+* ***Cú pháp:*** Sử dụng từ khóa `extends` để kế thừa.
+    ```php
+    class Subclass-name extends Superclass-name {  
+   //methods and fields
+    }
+    ```
+    _Ví dụ_
+    ```php
+    class Employee {
+    float salary = 1000;
+    }
+ 
+    class Programmer extends Employee {
+        int bonus = 150;
+    }
+ 
+    public class InheritanceSample1 {
+        public static void main(String args[]) {
+            Programmer p = new Programmer();
+            System.out.println("Programmer salary is: " + p.salary);
+            System.out.println("Bonus of Programmer is: " + p.bonus);
+        }
+    }  
+    ```
+### * Polymorphism (Tính đa hình)
+* ***Đa hình trong java (Polymorphism)*** là một khái niệm mà chúng ta có thể thực hiện một hành động bằng nhiều cách khác nhau.Có hai kiểu của đa hình trong java, đó là đa hình lúc biên dịch (compile) và đa hình lúc thực thi (runtime). Chúng ta có thể thực hiện đa hình trong java bằng cách nạp chồng phương thức và ghi đè phương thức.
+_Ví dụ:_
+```php
+class Bike {
+    void run() {
+        System.out.println("running");
+    }
+}
+ 
+public class Splender extends Bike {
+    void run() {
+        System.out.println("running safely with 60km");
+    }
+ 
+    public static void main(String args[]) {
+        Bike b = new Splender();// upcasting
+        b.run();
+    }
+}
+```
+### * Common Modifiers
+Trong java, có 4 phạm vi truy cập của Access Modifier.Bảng dưới đây mô tả khả năng truy cập của các Access Modifier trong java:
+| Access Modifier | Trong lớp | Trong package | Ngoài package bởi lớp con | Ngoài package |
+| --------------- | --------- | ------------- | ------------------------- | ------------- |
+| Private         | Y         | N             | N                         | N             |
+| Default         | Y         | Y             | N                         | N             |
+| Protected       | Y         | Y             | Y                         | N             |
+| Public          | Y         | Y             | Y                         | Y             |
+
+### * Abstract Classes
+Một lớp được khai báo với từ khóa abstract là lớp abstract trong Java. Lớp abstract có nghĩa là lớp trừu tượng, nó có thể có các phương thức abstract hoặc non-abtract.
+* **Phương thức trừu tượng**
+  * Một phương thức được khai báo là abstract và không có trình triển khai thì đó là phương thức trừu tượng.
+
+  * Nếu muốn một lớp chứa một phương thức cụ thể nhưng bạn muốn triển khai thực sự phương thức đó để được quyết định bởi các lớp con, thì bạn có thể khai báo phương thức đó trong lớp cha ở dạng abstract.
+    ```php
+    // Khai bao phuong thuc voi tu khoa abstract va khong co than phuong thuc
+    abstract void printStatus();
+    ```
+### * Interface
+* Một Interface trong Java là một bản thiết kế của một lớp. Nó chỉ có các phương thức trừu tượng.
+* Các trường của Interface là public, static và final theo mặc định và các phương thức là public và abstract.
+* Một Interface trong Java là một tập hợp các phương thức trừu tượng (abstract). Một class triển khai một interface, do đó kế thừa các phương thức abstract của interface.
+*  Viết một interface giống như viết một lớp, nhưng chúng có 2 định nghĩa khác nhau. Một lớp mô tả các thuộc tính và hành vi của một đối tượng. Một interface chứa các hành vi mà một class triển khai.
+_Ví dụ_
+```php
+interface printable {  
+void print();  
+}  
+   
+class A6 implements printable {  
+    public void print() {
+        System.out.println("Hello");
+    }  
+   
+    public static void main(String args[]){  
+        A6 obj = new A6();  
+        obj.print();  
+    }
+}   
+```
