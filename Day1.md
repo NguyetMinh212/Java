@@ -1,8 +1,8 @@
-#JAVA - Buổi 1
+# JAVA - Buổi 1
 ***
-##1. Syntax cơ bản 
+## 1. Syntax cơ bản 
 ***
-###**\*** **Nhập:**
+### **\*** **Nhập:**
 * Cần import `java.util.Scanner` có chứa class `Scanner`
 ```php
     import java.util.Scanner
@@ -12,7 +12,7 @@
     Scanner sc = new Scanner(System.in);
     string name = sc.nextLine();
 ```
-###**\*** **Xuất:**
+### **\*** **Xuất:**
 ```php
 public class HelloWorld {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class HelloWorld {
 | System.out.print("")    | Con trỏ chuột không xuống dòng          |
 | System.out.printf("")   | Giống trong C                           |
 
-###**\*** **Biến:**
+### **\*** **Biến:**
 Gồm 3 loại: Biến local, instance và static
 * **Biến local:**
   * Biến local được khai báo trong các phương thức, hàm contructor hoặc trong các block.
@@ -54,9 +54,9 @@ Gồm 3 loại: Biến local, instance và static
     }
 }
 ```
-###**\*** **Toán tử:**
-###**\*** **If-else:**
-###**\*** **Vòng lặp for:**
+### **\*** **Toán tử:**
+### **\*** **If-else:**
+### **\*** **Vòng lặp for:**
 * **Vòng lặp for đơn giản:**
     _Cú pháp:_
     ```php
@@ -107,7 +107,7 @@ Gồm 3 loại: Biến local, instance và static
     }
     ```
 
-###**\*** **Arrays:**
+### **\*** **Arrays:**
 * Để khai báo một mảng, khai báo loại biến với dấu ngoặc vuông []:
 >dataType[] arr;
 dataType []arr;
@@ -123,7 +123,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-###**\*** **Wrapper Class:**
+### **\*** **Wrapper Class:**
 * Lớp Wrapper trong java cung cấp cơ chế để chuyển đổi kiểu dữ liệu nguyên thủy thành kiểu đối tượng và từ đối tượng thành kiểu dữ liệu nguyên thủy.
 * Trong java, có 8 lớp Wrapper chúng được thiết kế trong gói java.lang:
 
@@ -149,7 +149,7 @@ for (int i = 0; i < 10; i++) {
 | toString()  | Trả về một đối tượng Chuỗi chứa giá trị của một đối số kiểu Số nguyên được chỉ định. |
 | parseInt()  | Truy xuất kiểu dữ liệu nguyên thủy của một chuỗi được chỉ định.                      |
 
-###**\*** **String Classes:**
+### **\*** **String Classes:**
 
 * String được định nghĩa là một chuỗi hoặc một mảng ký tự. String trong Java không phải là một kiểu dữ liệu nguyên thủy mà là một đối tượng của lớp class String. String trong Java là một trong những lớp phổ biến nhất và được sử dụng rộng rãi trong lập trình Java.
 * Có 2 cách để tạo đối tượng String:
@@ -185,7 +185,7 @@ for (int i = 0; i < 10; i++) {
 
 * **Lớp StringBuilder:** Trong java, lớp StringBuilder được sử dụng để tạo chuỗi có thể thay đổi (mutable). Lớp StringBuilder trong java tương tự như lớp StringBuffer ngoại trừ nó không đồng bộ(non-synchronized).
 
-###**\*** **Math Class:**
+### **\*** **Math Class:**
 
 ***Trước khi gọi các hàm Math, có thể import package để khỏi phải viết đầy đủ tên pack***
 ```php
@@ -207,9 +207,9 @@ import java.lang.Math;
 * `Math.toDegrees()` đổi góc radian thành độ
 * `Math.toRadians()` đổi góc đơn vị độ ra radian
 
-##2. Java Regex 
+## 2. Java Regex 
 ***
 ***Java Regex hoặc Regular Expression (biểu thức chính quy)*** là một API để định nghĩa một mẫu để tìm kiếm hoặc thao tác với chuỗi. Nó được sử dụng rộng rãi để xác định ràng buộc trên các chuỗi như xác thực mật khẩu, email, kiểu dữ liệu datetime, ...
 
-##3. Class & Object
+## 3. Class & Object
 ***
