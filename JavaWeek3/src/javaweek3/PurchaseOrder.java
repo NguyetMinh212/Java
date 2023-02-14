@@ -1,12 +1,20 @@
 
 package javaweek3;
 
-import static javaweek3.Product.num;
+//import static javaweek3.Product.num;
 
 public class PurchaseOrder {
     public static int orderNum = 0;
     private String productId, customerId, employeeId, orderId;
     private int productNum;
+
+    public PurchaseOrder(String productId, String customerId, String employeeId, String orderId, int productNum) {
+        this.productId = productId;
+        this.customerId = customerId;
+        this.employeeId = employeeId;
+        this.orderId = orderId;
+        this.productNum = productNum;
+    }
 
     public PurchaseOrder(String productId, String customerId, String employeeId, int productNum) {
         this.productId = productId;
